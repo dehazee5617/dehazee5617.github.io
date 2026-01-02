@@ -1,0 +1,47 @@
+:root {
+  --bg: #060607;
+  --red: #b3001b;
+  --red2: #5a0010;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(1200px 800px at 50% 50%, rgba(179, 0, 27, 0.18), transparent 55%),
+    radial-gradient(900px 600px at 30% 30%, rgba(90, 0, 16, 0.22), transparent 60%),
+    var(--bg);
+}
+
+.stage {
+  position: fixed;
+  inset: 0;
+}
+
+.stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 700px at 50% 50%, transparent 52%, rgba(0, 0, 0, 0.55) 100%),
+    radial-gradient(1200px 900px at 50% 50%, rgba(179, 0, 27, 0.12), transparent 60%);
+}
+
+.art {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: contrast(1.03) saturate(1.02);
+  box-shadow: 0 0 0 1px rgba(179, 0, 27, 0.35), 0 0 80px rgba(179, 0, 27, 0.18);
+}
